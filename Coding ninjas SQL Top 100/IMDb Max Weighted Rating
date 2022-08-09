@@ -1,0 +1,7 @@
+Select gen.genre as genre, MAX((I.Rating+I.MetaCritic/10.0)/2) as weighted_rating from genre gen JOIN IMDB I on I.movie_id=gen.movie_id 
+where Title LIKE '%(2014)%' and genre is NOT NULL group by genre order by genre;
+
+
+
+
+https://www.codingninjas.com/codestudio/problems/imdb_1755913?topList=top-100-sql-problems&leftPanelTab=0
