@@ -1,0 +1,8 @@
+Select IMD.Title, IMD.Rating from IMDB IMD INNER JOIN earning earnin on IMD.movie_id=earnin.movie_id 
+where IMD.Title LIKE '%(2012)%' and IMD.MetaCritic>60 and earnin.domestic>100000000;
+
+
+
+
+
+https://www.codingninjas.com/codestudio/problems/imdb_1755910?topList=top-100-sql-problems&leftPanelTab=0
