@@ -1,0 +1,13 @@
+Method -1 
+
+
+select province_id, sum_height from 
+(select province_id, sum(height) as sum_height from patients 
+group by province_id) where sum_height>=7000;
+
+
+Method -2 
+
+
+select province_id, sum(height) as sum_height from patients 
+group by province_id having sum_height>=7000;
