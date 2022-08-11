@@ -1,0 +1,23 @@
+Method -1 
+
+
+
+select allergies, count(patient_id) as total_diagnosis from(
+select allergies, patient_id from patients 
+where NOT allergies ='NKA' and NOT allergies ='NULL') 
+group by allergies order by total_diagnosis desc; 
+
+
+
+Method -2 
+
+
+SELECT
+  allergies,
+  COUNT(*) AS total_diagnosis
+FROM patients
+WHERE
+  NOT allergies = 'NKA'
+  AND allergies NOT NULL
+GROUP BY allergies
+ORDER BY total_diagnosis DESC
