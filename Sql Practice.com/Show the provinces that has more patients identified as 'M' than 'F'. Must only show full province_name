@@ -1,0 +1,17 @@
+Method -1
+
+select provinces.province_name from provinces join patients on
+patients.province_id=provinces.province_id group by province_name having 
+sum(gender='M')>sum(gender='F');
+
+
+
+Method -2 
+
+
+SELECT pr.province_name
+FROM patients AS pa
+  JOIN provinces AS pr ON pa.province_id = pr.province_id
+GROUP BY pr.province_name
+HAVING
+  COUNT( CASE WHEN gender = 'M' THEN 1 END) > COUNT( CASE WHEN gender = 'F' THEN 1 END);
