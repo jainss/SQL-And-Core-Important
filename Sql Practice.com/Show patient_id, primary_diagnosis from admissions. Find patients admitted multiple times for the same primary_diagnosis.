@@ -1,0 +1,19 @@
+Method -1 
+
+
+select patient_id, primary_diagnosis from admissions 
+group by primary_diagnosis, patient_id
+having count(primary_diagnosis)>1 and count(patient_id)>1 order by patient_id;
+
+
+Method -2 
+
+
+SELECT
+  patient_id,
+  primary_diagnosis
+FROM admissions
+GROUP BY
+  patient_id,
+  primary_diagnosis
+HAVING COUNT(*) > 1;
