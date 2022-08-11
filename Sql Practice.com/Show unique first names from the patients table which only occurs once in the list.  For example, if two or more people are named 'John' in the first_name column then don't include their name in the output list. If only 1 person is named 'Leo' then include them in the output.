@@ -1,0 +1,1 @@
+select first_name from patients GROUP by first_name having count(first_name) is 1;
