@@ -1,0 +1,2 @@
+SELECT distinct(SUBSTR(birth_date,1,4)) as birth_year FROM patients 
+order by birth_date;
