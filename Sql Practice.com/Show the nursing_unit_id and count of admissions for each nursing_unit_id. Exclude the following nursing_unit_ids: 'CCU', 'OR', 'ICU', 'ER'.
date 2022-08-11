@@ -1,0 +1,2 @@
+select nursing_unit_id, count(*) from admissions 
+where not nursing_unit_id in ('CCU','OR','ICU','ER') group by nursing_unit_id;
