@@ -1,0 +1,4 @@
+select items.item_description, round
+(items.quantity_on_hand*items.item_cost, 0) as total_cost, vendors.vendor_name
+from items join vendors on items.primary_vendor_id=vendors.vendor_id
+group by items.item_description order by total_cost desc
