@@ -1,0 +1,3 @@
+select concat(round(((select count(gender) from patients where gender='M')*100.0)/
+        (select count(gender) from patients),2),'%')
+as percent_of_male_patients from patients group by percent_of_male_patients;
