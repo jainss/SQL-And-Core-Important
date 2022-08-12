@@ -1,0 +1,4 @@
+select unit_dose_orders.patient_id as patient_id, sum(medications.medication_cost)
+ as total_spent from 
+unit_dose_orders join medications on medications.medication_id=unit_dose_orders.medication_id
+group by patient_id having total_spent>=150 order by total_spent desc;
