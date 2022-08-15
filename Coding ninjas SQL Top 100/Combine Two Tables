@@ -1,0 +1,6 @@
+select t1.Firstname, t1.LastName, t2.city, t2.state from 
+person as t1 left join address as t2 on t1.personId=t2.personID;
+
+
+
+https://www.codingninjas.com/codestudio/problems/combine-two-tables_2110759?topList=top-100-sql-problems&leftPanelTab=0
