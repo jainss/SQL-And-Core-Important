@@ -1,0 +1,10 @@
+Select user_id, Concat(Upper(Substr(name,1,1)),lower(Substr(name,2))) as name from users order by user_id;
+
+
+
+
+
+
+
+
+https://leetcode.com/problems/fix-names-in-a-table/
