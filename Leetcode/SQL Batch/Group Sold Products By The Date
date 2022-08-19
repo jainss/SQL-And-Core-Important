@@ -1,0 +1,11 @@
+Select sell_date, count(Distinct product ) as num_sold, group_Concat(distinct product) as products from Activities group by sell_date ;
+
+
+
+
+
+
+
+
+
+https://leetcode.com/problems/group-sold-products-by-the-date/ 
