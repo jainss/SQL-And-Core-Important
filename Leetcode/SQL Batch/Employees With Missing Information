@@ -1,0 +1,11 @@
+Select res.employee_id as employee_id  from (
+   (Select * from Employees LEFT OUTER JOIN Salaries using (employee_id))
+      UNION 
+   (Select * from Salaries LEFT OUTER JOIN Employees using (employee_id))
+) as res
+where res.name is NULL or res.salary is NULL order by employee_id;
+
+
+
+
+https://leetcode.com/problems/employees-with-missing-information/
