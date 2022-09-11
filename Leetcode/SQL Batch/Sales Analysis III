@@ -1,0 +1,30 @@
+method -1 
+
+
+select distinct product_id, product_name from product where product_id in (select distinct product_id 
+from sales group by product_id having min(sale_date) >= '2019-01-01' and max(sale_date) <= '2019-03-31');
+
+
+
+
+Method -2
+
+
+
+select distinct product_id, product_name from product where product_id in (select distinct product_id from sales group by product_id having 
+min(sale_date) >= '2019-01-01' and max(sale_date) <= '2019-03-31');
+
+
+
+
+Method -3
+
+
+
+Select p.product_id, p.product_name from sales as s join product as p on s.product_id=p.product_id group by s.product_id 
+having min(s.sale_date) >= '2019-01-01' and max(s.sale_date)<='2019-03-31';
+
+
+
+
+https://leetcode.com/problems/sales-analysis-iii/
