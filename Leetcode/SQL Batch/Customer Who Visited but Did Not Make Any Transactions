@@ -1,0 +1,6 @@
+Select v.customer_id, count(v.customer_id) as count_no_trans from Visits as v left join Transactions as t 
+on v.Visit_id=t.Visit_id where t.Transaction_id is NULL group by v.customer_id;
+
+
+
+https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/description/?envType=study-plan&id=sql-i
