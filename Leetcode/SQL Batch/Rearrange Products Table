@@ -1,0 +1,12 @@
+Select product_id, "store1" as Store, Store1 as price from Products where Store1 is not NULL 
+UNION
+Select product_id, "store2" as Store, Store2 as price from Products where Store2 is not NULL 
+UNION
+Select product_id, "store3" as Store, Store3 as price from Products where Store3 is not NULL 
+
+
+
+
+
+
+https://leetcode.com/problems/rearrange-products-table/description/
