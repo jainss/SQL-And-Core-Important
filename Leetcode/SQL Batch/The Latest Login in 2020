@@ -1,0 +1,6 @@
+Select user_id, Max(time_stamp) as last_stamp from Logins where time_stamp like '2020%' group by user_id 
+
+
+
+
+https://leetcode.com/problems/the-latest-login-in-2020/description/?envType=study-plan&id=sql-i
