@@ -1,0 +1,7 @@
+Select users.name, ifNull(Sum(rides.distance),0) as travelled_distance from Users left join Rides on 
+Rides.user_id=Users.id group by rides.user_id order by travelled_distance desc, name asc;
+
+
+
+
+https://leetcode.com/problems/top-travellers/description/?envType=study-plan&id=sql-i
