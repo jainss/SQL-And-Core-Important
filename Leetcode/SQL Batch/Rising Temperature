@@ -1,0 +1,17 @@
+Method -1
+use DATEDIFF
+Select w2.id from Weather as w1, Weather as w2 where w1.temperature <w2.temperature and DATEDIFF(w2.recordDate,w1.recordDate)=1;
+
+
+
+Method -2 
+
+use To_DAYS
+
+
+Select w2.id from Weather as w1, Weather as w2 where w1.temperature <w2.temperature and TO_DAYS(w2.recordDate)-TO_DAYS(w1.recordDate)=1;
+
+
+
+
+https://leetcode.com/problems/rising-temperature/description/?envType=study-plan&id=sql-i
