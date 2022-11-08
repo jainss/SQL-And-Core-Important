@@ -1,0 +1,8 @@
+Select customer_number from Orders group by customer_number Order by count(order_number) desc limit 1
+
+
+
+
+
+
+https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/description/?envType=study-plan&id=sql-i
